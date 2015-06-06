@@ -105,6 +105,16 @@ int main()
 	myPlayer.moveUp();
 
 	cout << "Player is now in " << myPlayer.getRoom()->getName() << endl;
+	myPlayer.moveRight();
+	
+	cout << "Player is now in " << myPlayer.getRoom()->getName() << endl;
+	vector<Item> items = myPlayer.getRoom()->getItems();
+
+	for (int x = 0; x < items.size(); x++)
+	{
+		cout << itemToString(items[x]) << endl;
+	}
+
 /*
 	cout << endl;
 	cout << "Which direction would you like to go?" << endl;

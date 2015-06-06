@@ -19,5 +19,6 @@ public:
 	AbstractRoom* getDown();
 	AbstractRoom* getLeft();
 	AbstractRoom* getRight();
+	vector<Item> getItems();
 };
 #endif

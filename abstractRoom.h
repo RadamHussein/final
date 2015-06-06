@@ -1,6 +1,8 @@
 #ifndef ABSTRACT_ROOM_H
 #define ABSTRACT_ROOM_H
 #include <string>
+#include <vector>
+#include "item.h"
 
 using namespace std;
 
@@ -16,5 +18,6 @@ public:
 	virtual AbstractRoom* getDown() = 0;
 	virtual AbstractRoom* getLeft() = 0;
 	virtual AbstractRoom* getRight() = 0;
+	virtual vector<Item> getItems() = 0;
 };
 #endif

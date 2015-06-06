@@ -5,6 +5,7 @@
 class Catacombs : public Room
 {
 public:
-	string getName();
+	virtual string getName();
+	virtual vector<Item> getItems();
 };
 #endif
