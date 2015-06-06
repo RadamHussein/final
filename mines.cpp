@@ -1,9 +1,7 @@
-#include <string>
 #include "mines.h"
 
-using namespace std;
-
-Mines::Mines()
+string Mines::getName()
 {
-	name = "The Mines";
+	string name = "The Mines";
+	return name;
 }

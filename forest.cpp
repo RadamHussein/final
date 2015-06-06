@@ -1,10 +1,7 @@
-#include <string>
 #include "forest.h"
 
-using namespace std;
-
-Forest::Forest()
+string Forest::getName()
 {
-	name = "Forest";
+	string name = "The Forest";
+	return name;
 }
-

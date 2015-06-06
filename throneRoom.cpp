@@ -1,9 +1,6 @@
-#include <string>
 #include "throneRoom.h"
 
-using namespace std;
-
-ThroneRoom::ThroneRoom()
+string ThroneRoom::getName()
 {
-	name = "Throne Room";
+	return "Throne Room";
 }

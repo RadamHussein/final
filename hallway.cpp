@@ -1,9 +1,7 @@
-#include <string>
 #include "hallway.h"
 
-using namespace std;
-
-Hallway::Hallway()
+string Hallway::getName()
 {
-	name = "Hallway";
+	string name = "Hallway";
+	return name;
 }

@@ -1,15 +1,23 @@
-#include <string>
 #ifndef ROOM_H
 #define ROOM_H
+#include "abstractRoom.h"
 
-using namespace std;
-
-class Room
+class Room : public AbstractRoom
 {
-protected:
-	string name;
+private:
+	AbstractRoom *up;
+	AbstractRoom *down;
+	AbstractRoom *left;
+	AbstractRoom *right;
 public:
 	Room();
-	string getName();
+	void setUp(AbstractRoom *up);
+	void setDown(AbstractRoom *down);
+	void setLeft(AbstractRoom *left);
+	void setRight(AbstractRoom *right);
+	AbstractRoom* getUp();
+	AbstractRoom* getDown();
+	AbstractRoom* getLeft();
+	AbstractRoom* getRight();
 };
 #endif

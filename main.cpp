@@ -1,4 +1,3 @@
-#include "Room.h"
 #include "infirmary.h"
 #include "tower.h"
 #include "mapRoom.h"
@@ -11,7 +10,6 @@
 #include "hallway.h"
 #include "infirmary.h"
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -39,6 +37,11 @@ int main()
 	cout << "Created " << gameDungeon.getName() << endl;
 	cout << "Created " << gameMines.getName() << endl;
 	cout << "Created " << gameThroneRoom.getName() << endl;
-
+/*
+	cout << endl;
+	cout << "Which direction would you like to go?" << endl;
+	cout << "[1] Up" << endl;
+	cout << "[2] Down" << endl;
+*/
 	return 0;
 }

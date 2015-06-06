@@ -1,9 +1,7 @@
-#include <string>
 #include "catacombs.h"
 
-using namespace std;
-
-Catacombs::Catacombs()
+string Catacombs::getName()
 {
-	name = "Catacombs";
+	string name = "Catacombs";
+	return name;
 }

@@ -1,9 +1,7 @@
-#include <string>
 #include "tower.h"
 
-using namespace std;
-
-Tower::Tower()
+string Tower::getName()
 {
-	name = "Tower";
+	string name = "The Tower";
+	return name;
 }

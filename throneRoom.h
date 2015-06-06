@@ -1,15 +1,10 @@
-#include <string>
-#include "Room.h"
 #ifndef THRONEROOM_H
 #define THRONEROOM_H
-
-using namespace std;
+#include "Room.h"
 
 class ThroneRoom : public Room
 {
-//private:
-//	string name;
 public:
-	ThroneRoom();
+	string getName();
 };
 #endif

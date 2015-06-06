@@ -1,15 +1,10 @@
-#include <string>
-#include "Room.h"
 #ifndef MAPROOM_H
 #define MAPROOM_H
-
-using namespace std;
+#include "Room.h"
 
 class MapRoom : public Room
 {
-//private: 
-//	string name;
 public:
-	MapRoom();
+	string getName();
 };
 #endif

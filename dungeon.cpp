@@ -1,9 +1,7 @@
-#include <string>
 #include "dungeon.h"
 
-using namespace std;
-
-Dungeon::Dungeon()
+string Dungeon::getName()
 {
-	name = "Dungeon";
+	string name = "Dungeon";
+	return name;
 }

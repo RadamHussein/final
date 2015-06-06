@@ -1,9 +1,7 @@
-#include <string>
 #include "greatHall.h"
 
-using namespace std;
-
-GreatHall::GreatHall()
+string GreatHall::getName()
 {
-	name = "Great Hall";
+	string name = "Great Hall";
+	return name;
 }

@@ -1,14 +1,50 @@
-#include <string>
 #include "Room.h"
-
-using namespace std;
 
 Room::Room()
 {
-	this->name = name;
+	up = NULL;
+	down = NULL;
+	left = NULL;
+	right = NULL;
 }
 
-string Room::getName()
+void Room::setUp(AbstractRoom *up)
 {
-	return name;
+	this->up = up;
 }
+
+void Room::setDown(AbstractRoom *down)
+{
+	this->down = down;
+}
+
+void Room::setLeft(AbstractRoom *left)
+{
+	this->left = left;
+}
+
+void Room::setRight(AbstractRoom *right)
+{
+	this->right = right;
+}
+
+AbstractRoom* Room::getUp()
+{
+	return up;
+}
+
+AbstractRoom* Room::getDown()
+{
+	return down;
+}
+
+AbstractRoom* Room::getLeft()
+{
+	return left;
+}
+
+AbstractRoom* Room::getRight()
+{
+	return right;
+}
+

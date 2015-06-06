@@ -1,9 +1,7 @@
-#include <string>
 #include "infirmary.h"
 
-using namespace std;
-
-Infirmary::Infirmary()
+string Infirmary::getName()
 {
-	name = "Infirmary";
+	string name = "Infirmary";
+	return name;
 }

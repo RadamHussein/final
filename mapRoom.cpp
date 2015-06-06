@@ -1,9 +1,7 @@
-#include <string>
 #include "mapRoom.h"
 
-using namespace std;
-
-MapRoom::MapRoom()
+string MapRoom::getName()
 {
-	name = "Map Room";
+	string name = "Map Room";
+	return name;
 }
