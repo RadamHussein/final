@@ -1,0 +1,18 @@
+*Create a series of rooms for the character to move through
+*Each room will be a class with 4 pointer variables pointing to other rooms
+*Must have at least 10 rooms
+*Will have a room super class that will not be implemented
+*Must have at least 3 derived classes for rooms that have different functions or characteristics
+*Must have a goal for the player
+*It is okay to have a random element to achieving the goal as long as there is always at least one solution
+*Must have a way to keep track of what room the player is in
+*Player is not required to have their own class
+*Player must also have a bag of some kind to hold items
+*Bag must have some limit to what it can hold
+*This can be limited to a certain number of items or be distinguished by size
+*Some of these items must be required as part of the solution
+*Must have a time limit to urge the player on
+*Player must interact with parts of the structure
+this can include interacting with or battling creatures or opponents in a room
+*There must be some time limit
+
