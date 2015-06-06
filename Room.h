@@ -11,14 +11,14 @@ private:
 	AbstractRoom *right;
 public:
 	Room();
-	void setUp(AbstractRoom *up);
-	void setDown(AbstractRoom *down);
-	void setLeft(AbstractRoom *left);
-	void setRight(AbstractRoom *right);
-	AbstractRoom* getUp();
-	AbstractRoom* getDown();
-	AbstractRoom* getLeft();
-	AbstractRoom* getRight();
-	vector<Item> getItems();
+	virtual void setUp(AbstractRoom *up);
+	virtual void setDown(AbstractRoom *down);
+	virtual void setLeft(AbstractRoom *left);
+	virtual void setRight(AbstractRoom *right);
+	virtual AbstractRoom* getUp();
+	virtual AbstractRoom* getDown();
+	virtual AbstractRoom* getLeft();
+	virtual AbstractRoom* getRight();
+	virtual vector<Item> getItems();
 };
 #endif

@@ -5,6 +5,6 @@
 class Forest : public Room
 {
 public:
-	string getName();
+	virtual string getName();
 };
 #endif

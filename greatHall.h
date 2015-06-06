@@ -5,6 +5,6 @@
 class GreatHall : public Room
 {
 public:
-	string getName();
+	virtual string getName();
 };
 #endif

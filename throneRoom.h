@@ -5,6 +5,6 @@
 class ThroneRoom : public Room
 {
 public:
-	string getName();
+	virtual string getName();
 };
 #endif
