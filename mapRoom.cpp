@@ -11,4 +11,5 @@ string MapRoom::getName()
 void MapRoom::update(Player& myPlayer)
 {
 	myPlayer.getBag().addItem(SWORD);
+	myPlayer.decreaseHealth();
 }

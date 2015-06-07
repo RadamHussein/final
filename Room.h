@@ -9,6 +9,7 @@ private:
 	AbstractRoom *down;
 	AbstractRoom *left;
 	AbstractRoom *right;
+	//int affect_health;
 public:
 	Room();
 	virtual void setUp(AbstractRoom *up);

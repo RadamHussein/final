@@ -6,6 +6,7 @@ class AbstractRoom;
 class Player
 {
 private:
+	int health = 10;
 	static const size_t BAG_SIZE = 3;
 	Bag bag;
 	AbstractRoom *room;
@@ -18,5 +19,7 @@ public:
 	void moveLeft();
 	void moveRight();
 	Bag& getBag();
+	void decreaseHealth();
+	void addHealth();
 };
 #endif

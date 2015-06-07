@@ -1,4 +1,5 @@
 #include "catacombs.h"
+#include "player.h"
 
 string Catacombs::getName()
 {
@@ -6,3 +7,7 @@ string Catacombs::getName()
 	return name;
 }
 
+void Catacombs::update(Player& myPlayer)
+{
+	myPlayer.decreaseHealth();
+}
