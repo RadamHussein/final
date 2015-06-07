@@ -1,6 +1,6 @@
 #include "bag.h"
 
-Bag::Bag(int size) : capacity(size), items()
+Bag::Bag(size_t size) : capacity(size), items()
 {
 }
 

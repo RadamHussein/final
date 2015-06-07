@@ -1,4 +1,3 @@
-#include "Player.h"
 #include "infirmary.h"
 #include "tower.h"
 #include "mapRoom.h"

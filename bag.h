@@ -8,10 +8,10 @@ using namespace std;
 class Bag
 {
 private:
-	int capacity;
+	size_t capacity;
 	vector<Item> items;
 public:
-	Bag(int size);
+	Bag(size_t size);
 	void addItem(Item);
 	void removeItem(Item);
 	bool containsItem(Item);

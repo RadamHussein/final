@@ -6,7 +6,7 @@ class AbstractRoom;
 class Player
 {
 private:
-	static const int BAG_SIZE = 3;
+	static const size_t BAG_SIZE = 3;
 	Bag bag;
 	AbstractRoom *room;
 	void setRoomIfNotNull(AbstractRoom* newRoom);
