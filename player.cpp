@@ -1,9 +1,9 @@
 #include "player.h"
+#include "abstractRoom.h"
 
 //TODO: consider throwing an exception if room is NULL
-Player::Player(AbstractRoom *room)
+Player::Player(AbstractRoom *ptrRoom) : bag(BAG_SIZE), room(ptrRoom)
 {
-	this->room = room;
 }
 
 AbstractRoom* Player::getRoom()
@@ -37,4 +37,9 @@ void Player::moveLeft()
 void Player::moveRight()
 {
 	setRoomIfNotNull(room->getRight());
+}
+
+Bag Player::getBag()
+{
+	return bag;
 }

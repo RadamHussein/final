@@ -20,5 +20,6 @@ public:
 	virtual AbstractRoom* getLeft();
 	virtual AbstractRoom* getRight();
 	virtual vector<Item> getItems();
+	virtual void update(Player&);
 };
 #endif

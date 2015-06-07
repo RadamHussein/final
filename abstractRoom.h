@@ -6,6 +6,7 @@
 
 using namespace std;
 
+class Player;
 class AbstractRoom
 {
 public:
@@ -19,5 +20,6 @@ public:
 	virtual AbstractRoom* getLeft() = 0;
 	virtual AbstractRoom* getRight() = 0;
 	virtual vector<Item> getItems() = 0;
+	virtual void update(Player&) = 0;	//pass in player, do shit to player
 };
 #endif

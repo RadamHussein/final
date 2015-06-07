@@ -1,11 +1,8 @@
 #include "Room.h"
+#include "player.h"
 
-Room::Room()
+Room::Room() : up(NULL), down(NULL), left(NULL), right(NULL)
 {
-	up = NULL;
-	down = NULL;
-	left = NULL;
-	right = NULL;
 }
 
 void Room::setUp(AbstractRoom *up)
@@ -53,3 +50,6 @@ vector<Item> Room::getItems()
 	vector<Item> items;
 	return items;
 }
+
+void Room::update(Player& player)
+{}
