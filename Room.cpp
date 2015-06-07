@@ -45,11 +45,5 @@ AbstractRoom* Room::getRight()
 	return right;
 }
 
-vector<Item> Room::getItems()
-{
-	vector<Item> items;
-	return items;
-}
-
 void Room::update(Player& player)
 {}

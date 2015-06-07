@@ -6,6 +6,5 @@ class Catacombs : public Room
 {
 public:
 	virtual string getName();
-	virtual vector<Item> getItems();
 };
 #endif
