@@ -11,7 +11,7 @@ Game::Game(AbstractRoom *begin, AbstractRoom *end) : myPlayer(begin), finish(end
 
 bool Game::isGameOver()
 {
-	return myPlayer.getBag().containsItem(Item::SWORD);
+	return myPlayer.getBag().containsItem(SWORD);
 }
 
 void Game::handleUserInput(int input)

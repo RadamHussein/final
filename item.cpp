@@ -2,15 +2,15 @@
 
 string itemToString(Item item)
 {
-	if(Item::SWORD == item)
+	if (SWORD == item)
 	{
 		return "SWORD";
 	}
-	else if (Item::KEY == item)
+	else if (KEY == item)
 	{
 		return "KEY";
 	}
-	else if (Item::POTION == item)
+	else if (POTION == item)
 	{
 		return "POTION";
 	}
