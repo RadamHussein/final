@@ -54,7 +54,21 @@ void Player::decreaseHealth(int amount)
 
 void Player::addHealth(int amount)
 {
-	health += amount;
+	if (amount == 10)
+	{	
+		health = amount;
+		cout << "The potion has restored your health!" << endl;
+	}
+	else
+	{
+		health += amount;
+
+		if (health > 10)
+		{
+			health = 10;
+			cout << "You are at full health." << endl;
+		}
+	}
 }
 
 int Player::getHealth()

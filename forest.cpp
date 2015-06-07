@@ -14,5 +14,8 @@ void Forest::update(Player& myPlayer)
 {
 	myPlayer.addHealth(2);
 	cout << "You found some food!" << endl;
+
+	myPlayer.getBag().addItem(KEY);
+	cout << "You found the Key." << endl;
 }
 

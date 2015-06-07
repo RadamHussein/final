@@ -115,7 +115,7 @@ int main()
 		cin >> userInput;
 
 		newGame.handleUserInput(userInput);
-
+/*
 		if (newGame.getPlayer().getBag().isEmpty() == false)
 		{
 			cout << "Would you like to use an item";
@@ -124,9 +124,10 @@ int main()
 
 			if (charInput == 'Y' || 'y')
 			{
-				cout << "print bag here" << endl;
+				
 			}
 		}
+*/
 	}
 
 	return 0;

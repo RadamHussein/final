@@ -20,6 +20,7 @@ void Bag::removeItem(Item item)
 		if (items[x] == item)
 		{
 			items.erase (items.begin()+x);
+			break;
 		}
 	}
 }
@@ -40,3 +41,10 @@ bool Bag::isEmpty()
 {
 	return items.empty();
 }
+/*
+void Bag::showItem()
+{
+	for (size_t x = 0; x < items.size(); x++)
+	{
+		cout <<
+*/ 
