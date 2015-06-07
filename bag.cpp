@@ -18,7 +18,7 @@ void Bag::removeItem(Item item)
 
 bool Bag::containsItem(Item item)
 {
-	for (int x = 0; x < items.size(); x++)
+	for (size_t x = 0; x < items.size(); x++)
 	{
 		if (items[x] == item)
 		{
