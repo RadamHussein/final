@@ -14,7 +14,15 @@ void Bag::addItem(Item item)
 }
 
 void Bag::removeItem(Item item)
-{}
+{
+	for (size_t x = 0; x <items.size(); x++)
+	{
+		if (items[x] == item)
+		{
+			items.erase (items.begin()+x);
+		}
+	}
+}
 
 bool Bag::containsItem(Item item)
 {

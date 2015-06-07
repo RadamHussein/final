@@ -1,5 +1,9 @@
 #include "catacombs.h"
+#include "item.h"
 #include "player.h"
+#include <iostream>
+
+using namespace std;
 
 string Catacombs::getName()
 {
@@ -7,3 +11,9 @@ string Catacombs::getName()
 	return name;
 }
 
+void Catacombs::update(Player& myPlayer)
+{
+	myPlayer.getBag().addItem(POTION);
+	cout << "You found a vile of potion." << endl;
+	myPlayer.decreaseHealth(1);
+}

@@ -18,6 +18,7 @@ int main()
 {
 
 	int userInput;
+	char charInput;
 
 	Hallway gameHallway;
 	Infirmary gameInfirmary;
@@ -114,6 +115,18 @@ int main()
 		cin >> userInput;
 
 		newGame.handleUserInput(userInput);
+
+		if (newGame.getPlayer().getBag().isEmpty() == false)
+		{
+			cout << "Would you like to use an item";
+			cout << " in your bag? Y/N" << endl;
+			cin >> charInput;
+
+			if (charInput == 'Y' || 'y')
+			{
+				cout << "print bag here" << endl;
+			}
+		}
 	}
 
 	return 0;

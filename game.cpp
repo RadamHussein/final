@@ -51,3 +51,8 @@ void Game::handleUserInput(int input)
 	myPlayer.getRoom()->update(myPlayer);
 	cout << "Health: " << myPlayer.getHealth() << endl;
 }
+
+Player& Game::getPlayer()
+{
+	return myPlayer;
+}

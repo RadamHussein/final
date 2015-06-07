@@ -11,6 +11,7 @@ private:
 public:
 	Game(AbstractRoom *start, AbstractRoom *finish);
 	bool isGameOver();
-	void handleUserInput(int input);	
+	void handleUserInput(int input);
+	Player& getPlayer();	
 };
 #endif
