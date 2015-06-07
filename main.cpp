@@ -10,12 +10,15 @@
 #include "throneRoom.h"
 #include "hallway.h"
 #include "infirmary.h"
+#include "game.h"
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
+
+	int userInput;
 
 	Hallway gameHallway;
 	Infirmary gameInfirmary;
@@ -99,27 +102,20 @@ int main()
 	gameThroneRoom.setLeft(&gameGreatHall);
 	gameThroneRoom.setRight(NULL);
 
-	Player myPlayer(&gameHallway);
+	Game newGame(&gameHallway, &gameThroneRoom);
 
-	cout << "Player is in " << myPlayer.getRoom()->getName() << endl;
-	myPlayer.moveUp();
-
-	cout << "Player is now in " << myPlayer.getRoom()->getName() << endl;
-	myPlayer.moveRight();
-	
-	cout << "Player is now in " << myPlayer.getRoom()->getName() << endl;
-	vector<Item> items = myPlayer.getRoom()->getItems();
-
-	for (int x = 0; x < items.size(); x++)
+	while (!newGame.isGameOver())
 	{
-		cout << itemToString(items[x]) << endl;
+		cout << endl;
+		cout << "Which direction would you like to go?" << endl;
+		cout << "[1] Up" << endl;
+		cout << "[2] Down" << endl;
+		cout << "[3] Left" << endl;
+		cout << "[4] Right" << endl;
+		cin >> userInput;
+
+		newGame.handleUserInput(userInput);
 	}
 
-/*
-	cout << endl;
-	cout << "Which direction would you like to go?" << endl;
-	cout << "[1] Up" << endl;
-	cout << "[2] Down" << endl;
-*/
 	return 0;
 }

@@ -6,5 +6,6 @@ class MapRoom : public Room
 {
 public:
 	virtual string getName();
+	virtual void update(Player&);
 };
 #endif

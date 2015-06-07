@@ -15,5 +15,6 @@ public:
 	void addItem(Item);
 	void removeItem(Item);
 	bool containsItem(Item);
+	bool isEmpty();
 };
 #endif

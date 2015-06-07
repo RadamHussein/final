@@ -39,7 +39,7 @@ void Player::moveRight()
 	setRoomIfNotNull(room->getRight());
 }
 
-Bag Player::getBag()
+Bag& Player::getBag()
 {
 	return bag;
 }

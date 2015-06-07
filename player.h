@@ -17,6 +17,6 @@ public:
 	void moveDown();
 	void moveLeft();
 	void moveRight();
-	Bag getBag();
+	Bag& getBag();
 };
 #endif
