@@ -4,7 +4,7 @@
 
 using namespace std;
 
-enum Item {SWORD, KEY, POTION, FOOD};
+typedef enum {SWORD, KEY, POTION, FOOD} Item;
 
 string itemToString(Item item);
 #endif
