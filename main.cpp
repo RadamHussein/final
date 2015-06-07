@@ -88,7 +88,7 @@ int main()
 	gameGreatHall.setDown(&gameMines);
 	gameGreatHall.setLeft(&gameMapRoom);
 	gameGreatHall.setRight(&gameThroneRoom);
-	
+
 	//mines
 	gameMines.setUp(&gameGreatHall);
 	gameMines.setDown(&gameDungeon);

@@ -7,7 +7,3 @@ string Dungeon::getName()
 	return name;
 }
 
-void Dungeon::update(Player& myPlayer)
-{
-	myPlayer.decreaseHealth();
-}

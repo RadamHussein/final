@@ -46,4 +46,6 @@ AbstractRoom* Room::getRight()
 }
 
 void Room::update(Player& player)
-{}
+{
+	player.decreaseHealth(1);
+}

@@ -7,7 +7,3 @@ string GreatHall::getName()
 	return name;
 }
 
-void GreatHall::update(Player& myPlayer)
-{
-	myPlayer.decreaseHealth();
-}

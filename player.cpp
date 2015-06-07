@@ -5,7 +5,7 @@
 using namespace std;
 
 //TODO: consider throwing an exception if room is NULL
-Player::Player(AbstractRoom *ptrRoom) : bag(BAG_SIZE), room(ptrRoom)
+Player::Player(AbstractRoom *ptrRoom) : bag(BAG_SIZE), health(DEFAULT_HEALTH), room(ptrRoom)
 {
 }
 
@@ -47,22 +47,17 @@ Bag& Player::getBag()
 	return bag;
 }
 
-void Player::decreaseHealth()
+void Player::decreaseHealth(int amount)
 {
-	health = health - 1;
-	cout << "Health: " << health << endl;
-
-	if (health < 3)
-	{
-		cout << "You must find food. Health is running out.";
-		cout << endl;
-	}
+	health -= amount;
 }
 
-void Player::addHealth()
+void Player::addHealth(int amount)
 {
-	health = health + 2;
-	cout << "You found some food. Health has been increased." << endl;
-	cout << "Health: " << health << endl;
+	health += amount;
 }
 
+int Player::getHealth()
+{
+	return health;
+}

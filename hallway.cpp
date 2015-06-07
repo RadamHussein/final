@@ -7,7 +7,3 @@ string Hallway::getName()
 	return name;
 }
 
-void Hallway::update(Player& myPlayer)
-{
-	myPlayer.decreaseHealth();
-}

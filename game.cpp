@@ -11,7 +11,18 @@ Game::Game(AbstractRoom *begin, AbstractRoom *end) : myPlayer(begin), finish(end
 
 bool Game::isGameOver()
 {
-	return myPlayer.getBag().containsItem(SWORD);
+	if (myPlayer.getHealth() == 0)
+	{
+		cout << "Out of health. Player is dead.";
+		cout << " GAME OVER" << endl;
+		return true;
+	}
+	else if (myPlayer.getBag().containsItem(SWORD))
+	{
+		cout << "You found the sword. You win!!" << endl;
+		return true;
+	}
+	return false;
 }
 
 void Game::handleUserInput(int input)
@@ -38,4 +49,5 @@ void Game::handleUserInput(int input)
 	cout << "Player is now in ";
 	cout << myPlayer.getRoom()->getName() << " after move." << endl;
 	myPlayer.getRoom()->update(myPlayer);
+	cout << "Health: " << myPlayer.getHealth() << endl;
 }

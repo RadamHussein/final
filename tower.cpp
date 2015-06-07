@@ -9,5 +9,5 @@ string Tower::getName()
 
 void Tower::update(Player& myPlayer)
 {
-	myPlayer.decreaseHealth();
+	myPlayer.decreaseHealth(1);
 }

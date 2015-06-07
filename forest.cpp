@@ -1,5 +1,8 @@
 #include "forest.h"
 #include "player.h"
+#include <iostream>
+
+using namespace std;
 
 string Forest::getName()
 {
@@ -9,6 +12,7 @@ string Forest::getName()
 
 void Forest::update(Player& myPlayer)
 {
-	myPlayer.addHealth();
+	myPlayer.addHealth(2);
+	cout << "You found some food!" << endl;
 }
 

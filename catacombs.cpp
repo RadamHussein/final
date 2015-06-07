@@ -7,7 +7,3 @@ string Catacombs::getName()
 	return name;
 }
 
-void Catacombs::update(Player& myPlayer)
-{
-	myPlayer.decreaseHealth();
-}

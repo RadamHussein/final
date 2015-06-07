@@ -7,7 +7,3 @@ string Mines::getName()
 	return name;
 }
 
-void Mines::update(Player& myPlayer)
-{
-	myPlayer.decreaseHealth();
-}

@@ -6,6 +6,5 @@ class Mines : public Room
 {
 public:
 	virtual string getName();
-	virtual void update(Player&);
 };
 #endif
