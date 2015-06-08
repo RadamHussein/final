@@ -107,27 +107,15 @@ int main()
 	while (!newGame.isGameOver())
 	{
 		cout << endl;
-		cout << "Which direction would you like to go?" << endl;
+		cout << "What is your next move?" << endl;
 		cout << "[1] Up" << endl;
 		cout << "[2] Down" << endl;
 		cout << "[3] Left" << endl;
 		cout << "[4] Right" << endl;
+		cout << "[5] View bag" << endl;
 		cin >> userInput;
 
 		newGame.handleUserInput(userInput);
-/*
-		if (newGame.getPlayer().getBag().isEmpty() == false)
-		{
-			cout << "Would you like to use an item";
-			cout << " in your bag? Y/N" << endl;
-			cin >> charInput;
-
-			if (charInput == 'Y' || 'y')
-			{
-				
-			}
-		}
-*/
 	}
 
 	return 0;

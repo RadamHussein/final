@@ -10,6 +10,11 @@ string Infirmary::getName()
 	return name;
 }
 
+int Infirmary::getRoomNumber()
+{
+	return 2;
+}
+
 void Infirmary::update(Player& myPlayer)
 {
 	myPlayer.decreaseHealth(4);

@@ -11,6 +11,7 @@ class AbstractRoom
 {
 public:
 	virtual string getName() = 0;
+	virtual int getRoomNumber() = 0;
 	virtual void setUp(AbstractRoom *up) = 0;
 	virtual void setDown(AbstractRoom *down) = 0;
 	virtual void setLeft(AbstractRoom *left) = 0;

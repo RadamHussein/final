@@ -11,6 +11,11 @@ string Mines::getName()
 	return name;
 }
 
+int Mines::getRoomNumber()
+{
+	return 9;
+}
+
 void Mines::update(Player& myPlayer)
 {
 	myPlayer.getBag().addItem(GOLD);

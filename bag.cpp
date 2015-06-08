@@ -1,4 +1,7 @@
 #include "bag.h"
+#include <iostream>
+
+using namespace std;
 
 Bag::Bag(size_t size) : capacity(size), items()
 {
@@ -41,10 +44,28 @@ bool Bag::isEmpty()
 {
 	return items.empty();
 }
-/*
-void Bag::showItem()
+
+void Bag::printBag()
 {
+	cout << "Your bag contains: ";
 	for (size_t x = 0; x < items.size(); x++)
 	{
-		cout <<
-*/ 
+		if (items[x] == SWORD)
+		{
+			cout << "SWORD ";
+		}
+		else if (items[x] == KEY)
+		{
+			cout << "KEY ";
+		}
+		else if (items[x] == POTION)
+		{
+			cout << "POTION ";
+		}
+		else if (items[x] == GOLD)
+		{
+			cout << "GOLD ";
+		}
+	}
+}
+ 

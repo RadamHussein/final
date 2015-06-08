@@ -16,5 +16,6 @@ public:
 	void removeItem(Item);
 	bool containsItem(Item);
 	bool isEmpty();
+	void printBag();
 };
 #endif

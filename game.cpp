@@ -17,9 +17,9 @@ bool Game::isGameOver()
 		cout << " GAME OVER" << endl;
 		return true;
 	}
-	else if (myPlayer.getBag().containsItem(SWORD))
+	else if (myPlayer.getBag().containsItem(SWORD) && (myPlayer.getRoom()->getRoomNumber() == 10))
 	{
-		cout << "You found the sword. You win!!" << endl;
+		cout << "You've brought the sword. The throne is now yours! You win!!" << endl;
 		return true;
 	}
 	return false;
@@ -46,6 +46,17 @@ void Game::handleUserInput(int input)
 		case 4:	
 			myPlayer.moveRight();
 			break;
+		case 5:
+			if (myPlayer.getBag().isEmpty() == true)
+			{
+				cout << "Your bag is empty" << endl;
+				break;
+			}
+			else
+			{
+				myPlayer.getBag().printBag();
+				break;
+			}
 		default:
 			break;
 	}
@@ -73,8 +84,16 @@ void Game::handleUserInput(int input)
 			{
 				if (myPlayer.getBag().containsItem(POTION) == true)
 				{
-					myPlayer.addHealth(10);
-					myPlayer.getBag().removeItem(POTION);
+					if (myPlayer.getRoom()->getRoomNumber() == 6)
+					{
+						cout << "A wizard has cursed the forest.";
+						cout << " Potion will not work here." << endl;
+					}
+					else
+					{
+						myPlayer.addHealth(10);
+						myPlayer.getBag().removeItem(POTION);
+					}
 				}
 				else
 				{

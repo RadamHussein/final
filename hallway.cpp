@@ -7,3 +7,7 @@ string Hallway::getName()
 	return name;
 }
 
+int Hallway::getRoomNumber()
+{
+	return 1;
+}

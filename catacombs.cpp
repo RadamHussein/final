@@ -11,6 +11,11 @@ string Catacombs::getName()
 	return name;
 }
 
+int Catacombs::getRoomNumber()
+{
+	return 4;
+}
+
 void Catacombs::update(Player& myPlayer)
 {
 	myPlayer.getBag().addItem(POTION);

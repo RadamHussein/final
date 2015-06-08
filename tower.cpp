@@ -11,6 +11,11 @@ string Tower::getName()
 	return name;
 }
 
+int Tower::getRoomNumber()
+{
+	return 3;
+}
+
 void Tower::update(Player& myPlayer)
 {
 	myPlayer.getBag().addItem(GOLD);

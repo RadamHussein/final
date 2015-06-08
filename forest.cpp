@@ -10,12 +10,16 @@ string Forest::getName()
 	return name;
 }
 
+int Forest::getRoomNumber()
+{
+	return 6;
+}
+
 void Forest::update(Player& myPlayer)
 {
-	myPlayer.addHealth(2);
-	cout << "You found some food!" << endl;
-
 	myPlayer.getBag().addItem(KEY);
 	cout << "You found the Key." << endl;
+
+	myPlayer.decreaseHealth(1);
 }
 

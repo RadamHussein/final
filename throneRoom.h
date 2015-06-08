@@ -6,5 +6,6 @@ class ThroneRoom : public Room
 {
 public:
 	virtual string getName();
+	virtual int getRoomNumber();
 };
 #endif
