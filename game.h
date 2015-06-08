@@ -14,5 +14,6 @@ public:
 	string gameLocation();
 	void handleUserInput(int input);
 	Player& getPlayer();	
+	void listGoal();
 };
 #endif

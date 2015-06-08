@@ -91,12 +91,19 @@ int main()
 	gameThroneRoom.setLeft(&gameGreatHall);
 	gameThroneRoom.setRight(NULL);
 
+	//create game object
 	Game newGame(&gameHallway, &gameThroneRoom);
+	
+	//list the goal for the game
+	cout << endl << endl;
+	newGame.listGoal();
 
-	while (!newGame.isGameOver())
+	//main menu
+	while (!newGame.isGameOver() && userInput != 8)
 	{
 		cout << endl;
-		cout << "Your location is " << newGame.gameLocation() << endl;
+		cout << "Your location is ";
+		cout  << newGame.gameLocation() << endl;
 
 		cout << endl;
 		cout << "What is your next move?" << endl;
@@ -104,9 +111,13 @@ int main()
 		cout << "[2] Down" << endl;
 		cout << "[3] Left" << endl;
 		cout << "[4] Right" << endl;
-		cout << "[5] View bag" << endl;
+		cout << "[5] View bag" << endl;	
+		cout << "[6] Use Item" << endl;
+		cout << "[7] List Goals" << endl;
+		cout << "[8] Quit" << endl;
 		cin >> userInput;
 
+		//call game input function
 		newGame.handleUserInput(userInput);
 	}
 
