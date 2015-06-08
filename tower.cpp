@@ -18,7 +18,10 @@ int Tower::getRoomNumber()
 
 void Tower::update(Player& myPlayer)
 {
-	myPlayer.getBag().addItem(GOLD);
-	cout << "You found some gold." << endl;
+	if (!myPlayer.getBag().containsItem(GOLD))
+	{
+		myPlayer.getBag().addItem(GOLD);
+		cout << "You found some gold." << endl;
+	}
 	myPlayer.decreaseHealth(1);
 }

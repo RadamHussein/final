@@ -12,7 +12,26 @@ void Bag::addItem(Item item)
 {
 	if (items.size() < capacity)
 	{
-		items.push_back(item);
+		if (containsItem(POTION))
+		{
+			//do nothing
+			cout << "you already have a potion" << endl;
+		}
+		else if (containsItem(SWORD))
+		{
+			//do nothing
+			cout << "you already have a sword" << endl;
+		}
+		else if (containsItem(KEY))
+		{
+			//do nothing
+			cout << "you already have a key" << endl;
+		}
+		else
+		{
+			cout << "Item added to your bag" << endl;
+			items.push_back(item);
+		}
 	}
 }
 
@@ -67,5 +86,6 @@ void Bag::printBag()
 			cout << "GOLD ";
 		}
 	}
+	cout << endl;
 }
  

@@ -18,7 +18,11 @@ int Catacombs::getRoomNumber()
 
 void Catacombs::update(Player& myPlayer)
 {
-	myPlayer.getBag().addItem(POTION);
-	cout << "You found a vile of potion." << endl;
+	if (!myPlayer.getBag().containsItem(POTION))
+	{
+		myPlayer.getBag().addItem(POTION);
+		cout << "You found a vile of potion. You may use this";
+		cout << " at any time to restore your health." << endl;
+	}
 	myPlayer.decreaseHealth(1);
 }

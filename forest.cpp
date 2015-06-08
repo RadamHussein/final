@@ -17,9 +17,11 @@ int Forest::getRoomNumber()
 
 void Forest::update(Player& myPlayer)
 {
-	myPlayer.getBag().addItem(KEY);
-	cout << "You found the Key." << endl;
-
+	if(!myPlayer.getBag().containsItem(KEY))
+	{
+		myPlayer.getBag().addItem(KEY);
+		cout << "You found the Key." << endl;
+	}
 	myPlayer.decreaseHealth(1);
 }
 
