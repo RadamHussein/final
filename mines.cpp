@@ -18,7 +18,10 @@ int Mines::getRoomNumber()
 
 void Mines::update(Player& myPlayer)
 {
-	myPlayer.getBag().addItem(GOLD);
-	cout << "You found some gold." << endl;
+	if (!myPlayer.getBag().containsItem(GOLD2))
+	{
+		myPlayer.getBag().addItem(GOLD2);
+		cout << "You found some gold." << endl;
+	}
 	myPlayer.decreaseHealth(1);
 }

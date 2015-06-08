@@ -103,14 +103,24 @@ void Game::handleUserInput(int input)
 			}
 			else if (userSelect == 2)
 			{
-				if (myPlayer.getBag().containsItem(GOLD) == true)
+				if (myPlayer.getBag().containsItem(GOLD1))
 				{
-					myPlayer.getBag().removeItem(GOLD);
+					myPlayer.getBag().removeItem(GOLD1);
+					cout << "Gold has been removed from your bag." << endl;
 				}
-				else
+				else if (!myPlayer.getBag().containsItem(GOLD1))
 				{
-					cout << "You do not have any Gold.";
-					cout << endl;
+					if (myPlayer.getBag().containsItem(GOLD2))
+					{
+						myPlayer.getBag().removeItem(GOLD2);
+						cout << "Gold has been removed from";
+						cout << " your bag." << endl;
+					}
+					else
+					{
+						cout << "You do not have any Gold.";
+						cout << endl;
+					}
 				}
 			}
 			else if (userSelect == 3)
