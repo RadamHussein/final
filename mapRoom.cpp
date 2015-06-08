@@ -20,6 +20,7 @@ void MapRoom::update(Player& myPlayer)
 {
 	char viewMap;
 
+	cout << endl;
 	cout << "Would you like to view the map? Y/N" << endl;
 	cin >> viewMap;
 

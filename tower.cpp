@@ -21,7 +21,7 @@ void Tower::update(Player& myPlayer)
 	if (!myPlayer.getBag().containsItem(GOLD1))
 	{
 		myPlayer.getBag().addItem(GOLD1);
-		cout << "You found some gold." << endl;
+		cout << "You found some gold in the Tower." << endl;
 	}
 	myPlayer.decreaseHealth(1);
 }

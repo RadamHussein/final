@@ -19,10 +19,17 @@ bool Game::isGameOver()
 	}
 	else if (myPlayer.getBag().containsItem(SWORD) && (myPlayer.getRoom()->getRoomNumber() == 10))
 	{
+		cout << endl;
 		cout << "You've brought the sword. The throne is now yours! You win!!" << endl;
+		cout << endl;
 		return true;
 	}
 	return false;
+}
+
+string Game::gameLocation()
+{
+	return myPlayer.getRoom()->getName();
 }
 
 void Game::handleUserInput(int input)
@@ -30,8 +37,6 @@ void Game::handleUserInput(int input)
 	char charInput;
 	int userSelect;
 
-	cout << "Player is in ";
-	cout << myPlayer.getRoom()->getName() << " before move." << endl;
 	switch(input)
 	{ 
 		case 1:
@@ -60,10 +65,12 @@ void Game::handleUserInput(int input)
 		default:
 			break;
 	}
+	cout << endl;
 	cout << "Player is now in ";
-	cout << myPlayer.getRoom()->getName() << " after move." << endl;
+	cout << myPlayer.getRoom()->getName() << endl;
 	myPlayer.getRoom()->update(myPlayer);
-	cout << "Health: " << myPlayer.getHealth() << endl;
+	cout << endl;
+	cout << "Health: " << myPlayer.getHealth() << endl << endl;
 
 	if (myPlayer.getBag().isEmpty() == false)
 	{

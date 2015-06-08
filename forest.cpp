@@ -17,10 +17,11 @@ int Forest::getRoomNumber()
 
 void Forest::update(Player& myPlayer)
 {
+	cout << "Beware the cursed Forest. Potions will not work here." << endl;
 	if(!myPlayer.getBag().containsItem(KEY))
 	{
 		myPlayer.getBag().addItem(KEY);
-		cout << "You found the Key." << endl;
+		cout << "You found the Key in the Forest." << endl;
 	}
 	myPlayer.decreaseHealth(1);
 }

@@ -17,6 +17,10 @@ void Bag::addItem(Item item)
 			items.push_back(item);
 		}
 	}
+	else 
+	{
+		cout << "Your bag is full. No item added." << endl;
+	}
 }
 
 void Bag::removeItem(Item item)
@@ -50,6 +54,7 @@ bool Bag::isEmpty()
 
 void Bag::printBag()
 {
+	cout << endl;
 	cout << "Your bag contains: ";
 	for (size_t x = 0; x < items.size(); x++)
 	{
@@ -71,7 +76,7 @@ void Bag::printBag()
 		}
 		else if (items[x] == GOLD2)
 		{
-			cout << "GOLD";
+			cout << "GOLD ";
 		}
 	}
 	cout << endl;

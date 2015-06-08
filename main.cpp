@@ -31,17 +31,6 @@ int main()
 	Mines gameMines;
 	ThroneRoom gameThroneRoom;
 
-	cout << "Created " << gameHallway.getName() << endl;
-	cout << "Created " << gameInfirmary.getName() << endl;
-	cout << "Created " << gameTower.getName() << endl;
-	cout << "Created " << gameMapRoom.getName() << endl;
-	cout << "Created " << gameCatacombs.getName() << endl;
-	cout << "Created " << gameForest.getName() << endl;
-	cout << "Created " << gameGreatHall.getName() << endl;
-	cout << "Created " << gameDungeon.getName() << endl;
-	cout << "Created " << gameMines.getName() << endl;
-	cout << "Created " << gameThroneRoom.getName() << endl;
-
 	//hallway
 	gameHallway.setUp(&gameInfirmary);
 	gameHallway.setDown(&gameTower);
@@ -106,6 +95,9 @@ int main()
 
 	while (!newGame.isGameOver())
 	{
+		cout << endl;
+		cout << "Your location is " << newGame.gameLocation() << endl;
+
 		cout << endl;
 		cout << "What is your next move?" << endl;
 		cout << "[1] Up" << endl;

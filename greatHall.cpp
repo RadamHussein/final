@@ -14,9 +14,10 @@ int GreatHall::getRoomNumber()
 {
 	return 8;
 }
-
+/*
 void GreatHall::update(Player& myPlayer)
 {
 	cout << "You found some food!" << endl;
 	myPlayer.addHealth(2);
 }
+*/

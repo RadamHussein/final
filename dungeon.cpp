@@ -20,23 +20,29 @@ void Dungeon::update(Player& myPlayer)
 {
 	char getSword;
 
-	cout << "The Sword is locked in a cell in the Dungeon.";
-	cout << "Would you like to get it out? Y/N" << endl;
-	cin >> getSword;
-
-	if (getSword == 'Y' || getSword == 'y')
+	if (!myPlayer.getBag().containsItem(SWORD))
 	{
-		if (myPlayer.getBag().containsItem(KEY))
+		cout << "The Sword is locked in a cell in the Dungeon. ";
+		cout << "Would you like to get it out? Y/N" << endl;
+		cin >> getSword;
+
+		if (getSword == 'Y' || getSword == 'y')
 		{
-			myPlayer.getBag().removeItem(KEY);
-			myPlayer.getBag().addItem(SWORD);
-		}
-		else
-		{
-			cout << "You do not have the Key." << endl;
+			if (myPlayer.getBag().containsItem(KEY))
+			{
+				myPlayer.getBag().removeItem(KEY);
+				myPlayer.getBag().addItem(SWORD);
+				cout << "The key has unlocked the cell.";
+				cout << " You now have the sword!" << endl;
+				cout << "You must take it to the Throne Room";
+				cout << " to fulfill your destiny." << endl;
+			}
+			else
+			{
+				cout << "You do not have the Key." << endl;
+			}
 		}
 	}
-	
 	myPlayer.decreaseHealth(1);
 
 }
