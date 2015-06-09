@@ -17,7 +17,16 @@ int Infirmary::getRoomNumber()
 
 void Infirmary::update(Player& myPlayer)
 {
-	myPlayer.decreaseHealth(5);
 	cout << "There is sickness in the infirmary. ";
 	cout << "You lose more health." << endl;
+
+	if (myPlayer.getHealth() < 4)
+	{
+		cout << "The sickness has overtaken you" << endl;
+		myPlayer.decreaseHealth(5);
+	}
+	else
+	{
+		myPlayer.decreaseHealth(5);
+	}
 }

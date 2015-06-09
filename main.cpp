@@ -11,6 +11,8 @@
 #include "infirmary.h"
 #include "game.h"
 #include <iostream>
+#include <string>
+#include <cstdlib>
 
 using namespace std;
 
@@ -18,7 +20,7 @@ int main()
 {
 
 	int userInput;
-	char charInput;
+	string checkInput;
 
 	Hallway gameHallway;
 	Infirmary gameInfirmary;
@@ -98,12 +100,17 @@ int main()
 	cout << endl << endl;
 	newGame.listGoal();
 
+
+	cout << endl;
+	cout << "Your location is ";
+	cout << newGame.gameLocation() << endl;
+
 	//main menu
 	while (!newGame.isGameOver() && userInput != 8)
 	{
-		cout << endl;
-		cout << "Your location is ";
-		cout  << newGame.gameLocation() << endl;
+		//cout << endl;
+		//cout << "Your location is ";
+		//cout  << newGame.gameLocation() << endl;
 
 		cout << endl;
 		cout << "What is your next move?" << endl;
@@ -115,10 +122,18 @@ int main()
 		cout << "[6] Use Item" << endl;
 		cout << "[7] List Goals" << endl;
 		cout << "[8] Quit" << endl;
-		cin >> userInput;
+		cin >> checkInput;
 
-		//call game input function
-		newGame.handleUserInput(userInput);
+		if (checkInput.at(0) > '8' || checkInput.at(0) < '1')	
+		{
+			cout << "Not a valid selection" << endl;
+		}
+		else
+		{
+			userInput = atoi(checkInput.c_str());
+			//call game input function
+			newGame.handleUserInput(userInput);
+		}
 	}
 
 	return 0;
